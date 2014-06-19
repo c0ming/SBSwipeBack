@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A9D3A26F1952F781005BF063 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D3A26E1952F781005BF063 /* Foundation.framework */; };
+		A9D3A2711952F781005BF063 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D3A2701952F781005BF063 /* CoreGraphics.framework */; };
+		A9D3A2731952F781005BF063 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D3A2721952F781005BF063 /* UIKit.framework */; };
+		A9D3A2791952F781005BF063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9D3A2771952F781005BF063 /* InfoPlist.strings */; };
+		A9D3A27B1952F781005BF063 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D3A27A1952F781005BF063 /* main.m */; };
+		A9D3A27F1952F781005BF063 /* SBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D3A27E1952F781005BF063 /* SBAppDelegate.m */; };
+		A9D3A2821952F781005BF063 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D3A2801952F781005BF063 /* Main_iPhone.storyboard */; };
+		A9D3A2851952F781005BF063 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D3A2831952F781005BF063 /* Main_iPad.storyboard */; };
+		A9D3A28A1952F781005BF063 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D3A2891952F781005BF063 /* Images.xcassets */; };
+		A9D3A2911952F781005BF063 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D3A2901952F781005BF063 /* XCTest.framework */; };
+		A9D3A2921952F781005BF063 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D3A26E1952F781005BF063 /* Foundation.framework */; };
+		A9D3A2931952F781005BF063 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D3A2721952F781005BF063 /* UIKit.framework */; };
+		A9D3A29B1952F781005BF063 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9D3A2991952F781005BF063 /* InfoPlist.strings */; };
+		A9D3A29D1952F781005BF063 /* SBSwipeBackDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D3A29C1952F781005BF063 /* SBSwipeBackDemoTests.m */; };
+		A9D3A2B21952F994005BF063 /* SBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D3A2B11952F994005BF063 /* SBViewController.m */; };
+		A9D3A2B91952FA3C005BF063 /* CALayer+Tracking.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D3A2B41952FA3C005BF063 /* CALayer+Tracking.m */; };
+		A9D3A2BA1952FA3C005BF063 /* SBSwipeBack.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D3A2B61952FA3C005BF063 /* SBSwipeBack.m */; };
+		A9D3A2BB1952FA3C005BF063 /* SBSwipeBackAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D3A2B81952FA3C005BF063 /* SBSwipeBackAnimator.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A9D3A2941952F781005BF063 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9D3A2631952F781005BF063 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9D3A26A1952F781005BF063;
+			remoteInfo = SBSwipeBackDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A9D3A26B1952F781005BF063 /* SBSwipeBackDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SBSwipeBackDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D3A26E1952F781005BF063 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A9D3A2701952F781005BF063 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A9D3A2721952F781005BF063 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A9D3A2761952F781005BF063 /* SBSwipeBackDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SBSwipeBackDemo-Info.plist"; sourceTree = "<group>"; };
+		A9D3A2781952F781005BF063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A9D3A27A1952F781005BF063 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A9D3A27C1952F781005BF063 /* SBSwipeBackDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SBSwipeBackDemo-Prefix.pch"; sourceTree = "<group>"; };
+		A9D3A27D1952F781005BF063 /* SBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBAppDelegate.h; sourceTree = "<group>"; };
+		A9D3A27E1952F781005BF063 /* SBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBAppDelegate.m; sourceTree = "<group>"; };
+		A9D3A2811952F781005BF063 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		A9D3A2841952F781005BF063 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		A9D3A2891952F781005BF063 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A9D3A28F1952F781005BF063 /* SBSwipeBackDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBSwipeBackDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D3A2901952F781005BF063 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A9D3A2981952F781005BF063 /* SBSwipeBackDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SBSwipeBackDemoTests-Info.plist"; sourceTree = "<group>"; };
+		A9D3A29A1952F781005BF063 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A9D3A29C1952F781005BF063 /* SBSwipeBackDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBSwipeBackDemoTests.m; sourceTree = "<group>"; };
+		A9D3A2B01952F994005BF063 /* SBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBViewController.h; sourceTree = "<group>"; };
+		A9D3A2B11952F994005BF063 /* SBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBViewController.m; sourceTree = "<group>"; };
+		A9D3A2B31952FA3C005BF063 /* CALayer+Tracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+Tracking.h"; path = "SBSwipeBack/CALayer+Tracking.h"; sourceTree = SOURCE_ROOT; };
+		A9D3A2B41952FA3C005BF063 /* CALayer+Tracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+Tracking.m"; path = "SBSwipeBack/CALayer+Tracking.m"; sourceTree = SOURCE_ROOT; };
+		A9D3A2B51952FA3C005BF063 /* SBSwipeBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBSwipeBack.h; path = SBSwipeBack/SBSwipeBack.h; sourceTree = SOURCE_ROOT; };
+		A9D3A2B61952FA3C005BF063 /* SBSwipeBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBSwipeBack.m; path = SBSwipeBack/SBSwipeBack.m; sourceTree = SOURCE_ROOT; };
+		A9D3A2B71952FA3C005BF063 /* SBSwipeBackAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBSwipeBackAnimator.h; path = SBSwipeBack/SBSwipeBackAnimator.h; sourceTree = SOURCE_ROOT; };
+		A9D3A2B81952FA3C005BF063 /* SBSwipeBackAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBSwipeBackAnimator.m; path = SBSwipeBack/SBSwipeBackAnimator.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9D3A2681952F781005BF063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D3A2711952F781005BF063 /* CoreGraphics.framework in Frameworks */,
+				A9D3A2731952F781005BF063 /* UIKit.framework in Frameworks */,
+				A9D3A26F1952F781005BF063 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D3A28C1952F781005BF063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D3A2911952F781005BF063 /* XCTest.framework in Frameworks */,
+				A9D3A2931952F781005BF063 /* UIKit.framework in Frameworks */,
+				A9D3A2921952F781005BF063 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9D3A2621952F781005BF063 = {
+			isa = PBXGroup;
+			children = (
+				A9D3A2741952F781005BF063 /* SBSwipeBackDemo */,
+				A9D3A2961952F781005BF063 /* SBSwipeBackDemoTests */,
+				A9D3A26D1952F781005BF063 /* Frameworks */,
+				A9D3A26C1952F781005BF063 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A9D3A26C1952F781005BF063 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9D3A26B1952F781005BF063 /* SBSwipeBackDemo.app */,
+				A9D3A28F1952F781005BF063 /* SBSwipeBackDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9D3A26D1952F781005BF063 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9D3A26E1952F781005BF063 /* Foundation.framework */,
+				A9D3A2701952F781005BF063 /* CoreGraphics.framework */,
+				A9D3A2721952F781005BF063 /* UIKit.framework */,
+				A9D3A2901952F781005BF063 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9D3A2741952F781005BF063 /* SBSwipeBackDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A9D3A2AF1952F8B8005BF063 /* SBSwipeBack */,
+				A9D3A27D1952F781005BF063 /* SBAppDelegate.h */,
+				A9D3A27E1952F781005BF063 /* SBAppDelegate.m */,
+				A9D3A2801952F781005BF063 /* Main_iPhone.storyboard */,
+				A9D3A2831952F781005BF063 /* Main_iPad.storyboard */,
+				A9D3A2B01952F994005BF063 /* SBViewController.h */,
+				A9D3A2B11952F994005BF063 /* SBViewController.m */,
+				A9D3A2891952F781005BF063 /* Images.xcassets */,
+				A9D3A2751952F781005BF063 /* Supporting Files */,
+			);
+			path = SBSwipeBackDemo;
+			sourceTree = "<group>";
+		};
+		A9D3A2751952F781005BF063 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9D3A2761952F781005BF063 /* SBSwipeBackDemo-Info.plist */,
+				A9D3A2771952F781005BF063 /* InfoPlist.strings */,
+				A9D3A27A1952F781005BF063 /* main.m */,
+				A9D3A27C1952F781005BF063 /* SBSwipeBackDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9D3A2961952F781005BF063 /* SBSwipeBackDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				A9D3A29C1952F781005BF063 /* SBSwipeBackDemoTests.m */,
+				A9D3A2971952F781005BF063 /* Supporting Files */,
+			);
+			path = SBSwipeBackDemoTests;
+			sourceTree = "<group>";
+		};
+		A9D3A2971952F781005BF063 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9D3A2981952F781005BF063 /* SBSwipeBackDemoTests-Info.plist */,
+				A9D3A2991952F781005BF063 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9D3A2AF1952F8B8005BF063 /* SBSwipeBack */ = {
+			isa = PBXGroup;
+			children = (
+				A9D3A2B31952FA3C005BF063 /* CALayer+Tracking.h */,
+				A9D3A2B41952FA3C005BF063 /* CALayer+Tracking.m */,
+				A9D3A2B51952FA3C005BF063 /* SBSwipeBack.h */,
+				A9D3A2B61952FA3C005BF063 /* SBSwipeBack.m */,
+				A9D3A2B71952FA3C005BF063 /* SBSwipeBackAnimator.h */,
+				A9D3A2B81952FA3C005BF063 /* SBSwipeBackAnimator.m */,
+			);
+			name = SBSwipeBack;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A9D3A26A1952F781005BF063 /* SBSwipeBackDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9D3A2A01952F781005BF063 /* Build configuration list for PBXNativeTarget "SBSwipeBackDemo" */;
+			buildPhases = (
+				A9D3A2671952F781005BF063 /* Sources */,
+				A9D3A2681952F781005BF063 /* Frameworks */,
+				A9D3A2691952F781005BF063 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SBSwipeBackDemo;
+			productName = SBSwipeBackDemo;
+			productReference = A9D3A26B1952F781005BF063 /* SBSwipeBackDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A9D3A28E1952F781005BF063 /* SBSwipeBackDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9D3A2A31952F781005BF063 /* Build configuration list for PBXNativeTarget "SBSwipeBackDemoTests" */;
+			buildPhases = (
+				A9D3A28B1952F781005BF063 /* Sources */,
+				A9D3A28C1952F781005BF063 /* Frameworks */,
+				A9D3A28D1952F781005BF063 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9D3A2951952F781005BF063 /* PBXTargetDependency */,
+			);
+			name = SBSwipeBackDemoTests;
+			productName = SBSwipeBackDemoTests;
+			productReference = A9D3A28F1952F781005BF063 /* SBSwipeBackDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9D3A2631952F781005BF063 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SB;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = c0ming;
+				TargetAttributes = {
+					A9D3A28E1952F781005BF063 = {
+						TestTargetID = A9D3A26A1952F781005BF063;
+					};
+				};
+			};
+			buildConfigurationList = A9D3A2661952F781005BF063 /* Build configuration list for PBXProject "SBSwipeBackDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A9D3A2621952F781005BF063;
+			productRefGroup = A9D3A26C1952F781005BF063 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9D3A26A1952F781005BF063 /* SBSwipeBackDemo */,
+				A9D3A28E1952F781005BF063 /* SBSwipeBackDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A9D3A2691952F781005BF063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D3A2851952F781005BF063 /* Main_iPad.storyboard in Resources */,
+				A9D3A28A1952F781005BF063 /* Images.xcassets in Resources */,
+				A9D3A2821952F781005BF063 /* Main_iPhone.storyboard in Resources */,
+				A9D3A2791952F781005BF063 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D3A28D1952F781005BF063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D3A29B1952F781005BF063 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9D3A2671952F781005BF063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D3A2B91952FA3C005BF063 /* CALayer+Tracking.m in Sources */,
+				A9D3A2BB1952FA3C005BF063 /* SBSwipeBackAnimator.m in Sources */,
+				A9D3A27B1952F781005BF063 /* main.m in Sources */,
+				A9D3A2B21952F994005BF063 /* SBViewController.m in Sources */,
+				A9D3A2BA1952FA3C005BF063 /* SBSwipeBack.m in Sources */,
+				A9D3A27F1952F781005BF063 /* SBAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9D3A28B1952F781005BF063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D3A29D1952F781005BF063 /* SBSwipeBackDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A9D3A2951952F781005BF063 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9D3A26A1952F781005BF063 /* SBSwipeBackDemo */;
+			targetProxy = A9D3A2941952F781005BF063 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A9D3A2771952F781005BF063 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9D3A2781952F781005BF063 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A9D3A2801952F781005BF063 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9D3A2811952F781005BF063 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		A9D3A2831952F781005BF063 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9D3A2841952F781005BF063 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		A9D3A2991952F781005BF063 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9D3A29A1952F781005BF063 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A9D3A29E1952F781005BF063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A9D3A29F1952F781005BF063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9D3A2A11952F781005BF063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SBSwipeBackDemo/SBSwipeBackDemo-Prefix.pch";
+				INFOPLIST_FILE = "SBSwipeBackDemo/SBSwipeBackDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A9D3A2A21952F781005BF063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SBSwipeBackDemo/SBSwipeBackDemo-Prefix.pch";
+				INFOPLIST_FILE = "SBSwipeBackDemo/SBSwipeBackDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A9D3A2A41952F781005BF063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SBSwipeBackDemo.app/SBSwipeBackDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SBSwipeBackDemo/SBSwipeBackDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SBSwipeBackDemoTests/SBSwipeBackDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A9D3A2A51952F781005BF063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SBSwipeBackDemo.app/SBSwipeBackDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SBSwipeBackDemo/SBSwipeBackDemo-Prefix.pch";
+				INFOPLIST_FILE = "SBSwipeBackDemoTests/SBSwipeBackDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9D3A2661952F781005BF063 /* Build configuration list for PBXProject "SBSwipeBackDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9D3A29E1952F781005BF063 /* Debug */,
+				A9D3A29F1952F781005BF063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9D3A2A01952F781005BF063 /* Build configuration list for PBXNativeTarget "SBSwipeBackDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9D3A2A11952F781005BF063 /* Debug */,
+				A9D3A2A21952F781005BF063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9D3A2A31952F781005BF063 /* Build configuration list for PBXNativeTarget "SBSwipeBackDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9D3A2A41952F781005BF063 /* Debug */,
+				A9D3A2A51952F781005BF063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9D3A2631952F781005BF063 /* Project object */;
+}
