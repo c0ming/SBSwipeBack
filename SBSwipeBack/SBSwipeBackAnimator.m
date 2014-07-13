@@ -11,12 +11,31 @@
 @import QuartzCore;
 
 static CGFloat const SBShadowOpacityBegin = 0.75;
-static CGFloat const SBShadowOpacityEnd = 0.1;
+static CGFloat const SBShadowOpacityEnd = 0.05;
 
-static CGFloat const SBOpacityBegin = 0.1;
+static CGFloat const SBOpacityBegin = 0.2;
 static CGFloat const SBOpacityEnd = 0.0;
 
-static CGFloat const SBTransitionDuration = 0.25;
+static CGFloat const SBTransitionDuration = 4;
+
+#pragma mark - UIView (EdgeShadow)
+
+@implementation UIView (EdgeShadow)
+
+- (void)setEdgeShadowWithOpacity:(CGFloat)opacity {
+    UIBezierPath *path = [UIBezierPath bezierPathWithRect:self.bounds];
+
+    self.layer.shadowOffset = CGSizeMake(-4.0, 0.0);
+    self.layer.shadowPath = path.CGPath;
+    self.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+    self.layer.shadowRadius = 4.0;
+    self.layer.shadowOpacity = opacity;
+    self.layer.masksToBounds = NO;
+}
+
+@end
+
+#pragma mark -
 
 @implementation SBSwipeBackAnimator
 
@@ -28,8 +47,15 @@ static CGFloat const SBTransitionDuration = 0.25;
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
 
+    [fromViewController.view setEdgeShadowWithOpacity:SBShadowOpacityBegin];
     [[transitionContext containerView] insertSubview:toViewController.view belowSubview:fromViewController.view];
-    [self addShadow:fromViewController.view];
+
+    // add mask layer to toViewController's view
+    CALayer *maskLayer = [CALayer layer];
+    maskLayer.frame = toViewController.view.bounds;
+    maskLayer.backgroundColor = [UIColor blackColor].CGColor;
+    maskLayer.opacity = SBOpacityBegin;
+    [toViewController.view.layer addSublayer:maskLayer];
 
     CGFloat width = CGRectGetWidth(fromViewController.view.frame);
     CGPoint fromViewCenter = fromViewController.view.center;
@@ -41,13 +67,6 @@ static CGFloat const SBTransitionDuration = 0.25;
     fromViewCenter.x = width + width / 2.0;
     toViewCenter.x = width / 2.0;
 
-    // mask layer
-    CALayer *maskLayer = [CALayer layer];
-    maskLayer.frame = toViewController.view.bounds;
-    maskLayer.backgroundColor = [UIColor blackColor].CGColor;
-    maskLayer.opacity = SBOpacityBegin;
-    [toViewController.view.layer addSublayer:maskLayer];
-
     [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0.0 options:UIViewAnimationOptionCurveLinear animations: ^{
         fromViewController.view.center = fromViewCenter;
         toViewController.view.center = toViewCenter;
@@ -57,28 +76,21 @@ static CGFloat const SBTransitionDuration = 0.25;
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
     }];
 
+    [CATransaction begin];
+    [CATransaction setAnimationDuration:[self transitionDuration:transitionContext]];
+
     CABasicAnimation *shadowOpacityAnimation = [CABasicAnimation animationWithKeyPath:@"shadowOpacity"];
     shadowOpacityAnimation.fromValue = [NSNumber numberWithFloat:SBShadowOpacityBegin];
-    shadowOpacityAnimation.toValue = [NSNumber numberWithFloat:SBShadowOpacityEnd];
-    shadowOpacityAnimation.duration = [self transitionDuration:transitionContext];
     [fromViewController.view.layer addAnimation:shadowOpacityAnimation forKey:@"shadowOpacity"];
+    fromViewController.view.layer.shadowOpacity = SBShadowOpacityEnd;
 
     CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     opacityAnimation.fromValue = [NSNumber numberWithFloat:SBOpacityBegin];
-    opacityAnimation.toValue = [NSNumber numberWithFloat:SBOpacityEnd];
     opacityAnimation.duration = [self transitionDuration:transitionContext];
     [maskLayer addAnimation:opacityAnimation forKey:@"opacity"];
-}
+    maskLayer.opacity = SBOpacityEnd;
 
-- (void)addShadow:(UIView *)view {
-    UIBezierPath *path = [UIBezierPath bezierPathWithRect:view.bounds];
-
-    view.layer.shadowOffset = CGSizeMake(-4.0, 0.0);
-    view.layer.shadowPath = path.CGPath;
-    view.layer.shadowColor = [UIColor lightGrayColor].CGColor;
-    view.layer.shadowRadius = 4.0;
-    view.layer.shadowOpacity = SBShadowOpacityBegin;
-    view.layer.masksToBounds = NO;
+    [CATransaction commit];
 }
 
 @end
