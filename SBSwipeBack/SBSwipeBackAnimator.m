@@ -16,7 +16,7 @@ static CGFloat const SBShadowOpacityEnd = 0.05;
 static CGFloat const SBOpacityBegin = 0.2;
 static CGFloat const SBOpacityEnd = 0.0;
 
-static CGFloat const SBTransitionDuration = 4;
+static CGFloat const SBTransitionDuration = 0.25;
 
 #pragma mark - UIView (EdgeShadow)
 
